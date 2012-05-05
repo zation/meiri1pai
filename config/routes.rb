@@ -1,4 +1,7 @@
 Meiri1pai::Application.routes.draw do
+
+  match 'movie/:name' => 'movie#show'
+  match 'weibo' => 'weibo#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
