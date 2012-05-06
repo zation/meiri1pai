@@ -4,6 +4,11 @@ class WeiboService
 	base_uri 'https://api.weibo.com/'
 
 	def self.mentions access_token
+		query = {
+			:access_token => access_token,
+			:filter_by_type => 1,
+			:filter_by_source => 1	
+		}
 		get '/statuses/mentions.json', :query => {:access_token => access_token}
 	end
 
