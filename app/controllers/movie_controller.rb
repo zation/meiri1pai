@@ -1,10 +1,10 @@
-class MovieController < ApplicationController
-	include HTTParty
-	require 'json'
+require 'weibo_service'
 
+class MovieController < ApplicationController
 	def show
 		access_token = SystemConfig.find_by_name 'access_token'
-		response = self.class.get 'https://api.weibo.com/2/statuses/mentions.json?access_token=' + access_token.value
-		@items = JSON.parse(response.body)['statuses']
+		@items = WeiboService.mentions(access_token.value)['statuses']
 	end
 end
+
+
