@@ -2,6 +2,7 @@ class WeiboService
 	include HTTParty
 
 	base_uri 'https://api.weibo.com/'
+	format :json
 
 	def self.mentions access_token
 		query = {
@@ -9,7 +10,7 @@ class WeiboService
 			:filter_by_type => 1,
 			:filter_by_source => 1	
 		}
-		get '/statuses/mentions.json', :query => {:access_token => access_token}
+		get('/statuses/mentions.json', :query => {:access_token => access_token})['statuses']
 	end
 
 	def self.access_token code
@@ -18,7 +19,6 @@ class WeiboService
 		data += 'grant_type=authorization_code&'
 		data += 'code=' + code + '&'
 		data += 'redirect_uri=http%3A%2F%2F127.0.0.1%3A3000%2Fweibo'
-		result = post '/oauth2/access_token?' + data
-		JSON.parse(result.body)['access_token']
+		post('/oauth2/access_token?' + data)['access_token']
 	end
 end
