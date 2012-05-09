@@ -5,4 +5,5 @@
 3. `git clone git@github.com:zation/meiri1pai.git`
 4. `bundle install`
 5. 开启服务器：`rails server`
-6. 打开网页[http://localhost:3000/](http://localhost:3000/)
+6. 打开网页[http://127.0.0.1:3000/weibo](http://127.0.0.1:3000/weibo)，使用每天一拍账号登陆
+7. 打开网页[http://localhost:3000/movie/a](http://localhost:3000/movie/a)
