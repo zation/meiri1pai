@@ -18,7 +18,7 @@ class WeiboService
 		data += 'client_secret=d1077720768a5f7b8e61c25e03d08e84&'
 		data += 'grant_type=authorization_code&'
 		data += 'code=' + code + '&'
-		data += 'redirect_uri=http%3A%2F%2F127.0.0.1%3A3000%2Fweibo'
+		data += 'redirect_uri=' + Meiri1pai::Application.config.redirect_host + '%2Fweibo'
 		post('/oauth2/access_token?' + data)['access_token']
 	end
 end

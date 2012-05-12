@@ -1,5 +1,6 @@
 Meiri1pai::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  config.redirect_host = 'http%3A%2F%2Fmeiri1pai.cloudfoundry.com'
 
   # Code is not reloaded between requests
   config.cache_classes = true
@@ -9,7 +10,7 @@ Meiri1pai::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
