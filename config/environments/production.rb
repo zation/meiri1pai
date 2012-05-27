@@ -1,6 +1,6 @@
 Meiri1pai::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  config.callback_context = 'http%3A%2F%2Fmeiri1pai.cloudfoundry.com'
+  config.callback_context = 'http%3A%2F%2Fmeiri1pai.heroku.com'
 
   # Code is not reloaded between requests
   config.cache_classes = true

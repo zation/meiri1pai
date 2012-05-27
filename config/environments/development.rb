@@ -1,6 +1,6 @@
 Meiri1pai::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-  config.callback_context = 'http%3A%2F%2Fmeiri1pai.cloudfoundry.com:3000'
+  config.callback_context = 'http%3A%2F%2Fmeiri1pai.heroku.com:3000'
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

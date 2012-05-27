@@ -7,8 +7,6 @@ gem 'rails', '3.2.3'
 
 gem 'pg'
 
-gem 'heroku'
-
 gem 'json'
 
 gem 'httparty'
