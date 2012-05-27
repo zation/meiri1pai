@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120527080131) do
+ActiveRecord::Schema.define(:version => 20120527093739) do
 
   create_table "images", :force => true do |t|
-    t.integer  "user_id"
+    t.text     "user_id"
     t.text     "url"
-    t.integer  "weibo_id"
+    t.text     "weibo_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
