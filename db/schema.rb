@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120505160922) do
+ActiveRecord::Schema.define(:version => 20120527080131) do
+
+  create_table "images", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "url"
+    t.integer  "weibo_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "system_configs", :force => true do |t|
     t.string   "name"

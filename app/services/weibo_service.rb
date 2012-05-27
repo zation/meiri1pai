@@ -4,13 +4,14 @@ class WeiboService
 	base_uri 'https://api.weibo.com/'
 	format :json
 
-	def self.mentions access_token
+	def self.mentions access_token, since_id = 0
 		query = {
 			:access_token => access_token,
 			:filter_by_type => 1,
-			:filter_by_source => 1
+			:filter_by_source => 0,
+			:since_id => since_id
 		}
-		get('/statuses/mentions.json', :query => {:access_token => access_token})['statuses']
+		get('/statuses/mentions.json', :query => query)['statuses']
 	end
 
 	def self.access_token code
