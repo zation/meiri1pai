@@ -12,6 +12,7 @@ class WeiboController < ApplicationController
 			access_token_value = WeiboService.access_token(code)
 			
 			access_token = SystemConfig.find_by_name 'access_token'
+			access_token = SystemConfig.create(:name => 'access_token', :value => '') if access_token.nil?
 			access_token.value = access_token_value
 			access_token.save
 		end
